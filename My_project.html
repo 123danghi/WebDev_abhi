@@ -4,7 +4,36 @@
 <style>
  .prof{background:url(1154.jpg)  no-repeat; font-size: 30px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;padding-top: 270px;padding-left: 634px;padding-bottom: 400px;background-size: 1410px 680px;
    display: flex; }
-   #who{background: url(FullSizeRender_2-removebg-preview.png)no-repeat;background-size:500px 700px ;padding-left: 500px;padding-top: 300px;padding-bottom: 210px;font-family:fantasy;font-size: 40px;display: flex;}
+ .parallax-text{
+    position: absolute;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 15vw;
+    font-style: italic;
+    top: 1200px;
+    right: 40px;
+}
+.parallax-text::after {
+    content: attr(text);
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    color: transparent;
+    -webkit-text-stroke: 0.15vw black;
+}
+#omfo{
+    width: 50vw;
+    animation: Nameanimo 2s cubic-bezier(0.25, 1, 0.5, 1)infinite alternate;
+}
+@keyframes Nameanimo {
+    0%, 10%{
+        transform: translate(100vw, 0) rotate(15deg);
+    }
+    90%, 100%{
+        transform: translate(-5vw, -5vw)rotate(-30deg);
+    }
+}
+   #who{font-family:fantasy;font-size: 40px;display: flex;}
   img{padding-top:50px;display: flex;float: left;}
   body{background-color:white;}
   h1{color: black;display: flex;text-align: center;padding-top: 200px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;padding-left: 250px;}
@@ -65,6 +94,10 @@ dropdown {
     </div>
   </div>
 <p class="prof">My_Profile__<br>abhinav_kumar_</p>
+ <span class="parallax-text" text="ABHINAV">
+  ABHINAV
+</span>
+<img id="omfo" src="FullSizeRender_2-removebg-preview.png" alt="WevDev_abhi">
  <p id="who">$_ME_$<br><br>This is my portfolio website or<BR> personal website with basic knowledge of Web Developement languages <br>like- HTML,CSS,BOOTSTRAP</p>
  <a href="mailto:danghiabhinav15@gmail.com">danghiabhinav15@gmail.com</a><br>
 <img src="4650095.jpg" height="700px" width="700px"><br>
